@@ -10,7 +10,8 @@ namespace LineComparison274
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome to linecomparison program");
+            Console.WriteLine("Welcome to the Line Comparison Program");
+
             Console.WriteLine("enter the X1 and Y1 coordinate");
             double X1 = Convert.ToDouble(Console.ReadLine());
             double Y1 = Convert.ToDouble(Console.ReadLine());
@@ -19,8 +20,26 @@ namespace LineComparison274
             double X2 = Convert.ToDouble(Console.ReadLine());
             double Y2 = Convert.ToDouble(Console.ReadLine());
 
-            double Length = Math.Sqrt((Math.Pow((X2 - X1), 2)) + (Math.Pow((Y2 - Y1), 2)));
-            Console.WriteLine("the lenght of two line " + Length);
+            Console.WriteLine("enter the X3 and Y3 coordinate");
+            double X3 = Convert.ToDouble(Console.ReadLine());
+            double Y3 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("enter the X4 and Y4 coordinate");
+            double X4 = Convert.ToDouble(Console.ReadLine());
+            double Y4 = Convert.ToDouble(Console.ReadLine());
+
+
+            double LengthFirstLine = Math.Sqrt((Math.Pow((X2 - X1), 2)) + (Math.Pow((Y2 - Y1), 2)));
+            Console.WriteLine("the lenght of First line: " + LengthFirstLine);
+
+            double LengthSecondLine = Math.Sqrt((Math.Pow((X4 - X3), 2)) + (Math.Pow((Y4 - Y3), 2)));
+            Console.WriteLine("the lenght of Secomd line: " + LengthSecondLine);
+
+            if (LengthFirstLine == LengthSecondLine)
+
+                Console.WriteLine("Lines are equal");
+            else
+                Console.WriteLine("Lines are not equal");
 
             Console.ReadLine();
         }
