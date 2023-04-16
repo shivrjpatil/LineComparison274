@@ -9,8 +9,8 @@ namespace LineComparison274
     internal class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Welcome to the Line Comparison Program");
+        { 
+            Console.WriteLine("Welcome to the Line Comparison problem statement");
 
             Console.WriteLine("enter the X1 and Y1 coordinate");
             double X1 = Convert.ToDouble(Console.ReadLine());
@@ -33,18 +33,15 @@ namespace LineComparison274
             Console.WriteLine("the lenght of First line: " + LengthFirstLine);
 
             double LengthSecondLine = Math.Sqrt((Math.Pow((X4 - X3), 2)) + (Math.Pow((Y4 - Y3), 2)));
-            Console.WriteLine("the lenght of Secomd line: " + LengthSecondLine);
+            Console.WriteLine("the lenght of Second line: " + LengthSecondLine);
 
-            if (LengthFirstLine > LengthSecondLine)
-
-                Console.WriteLine("the first line is greater than second line ");
-
-            else if (LengthFirstLine == LengthSecondLine)
-
-                Console.WriteLine("Lines are equal");
+            int status = (LengthFirstLine.CompareTo(LengthSecondLine));
+            if (status > 0)
+                Console.WriteLine(" Length of first line :{0} is greater then Length of second line : {1}", LengthFirstLine, LengthSecondLine);
+            else if (status < 0)
+                Console.WriteLine(" Length of first line : {0} is less then Length of second line : {1}", LengthFirstLine, LengthSecondLine);
             else
-                Console.WriteLine("second line is greater than first line");
-
+                Console.WriteLine(" Length of first line : {0} is equal to Length of second line : {1}", LengthFirstLine, LengthSecondLine);
             Console.ReadLine();
         }
     }
